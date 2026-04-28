@@ -531,7 +531,7 @@
         /* ===================== PAIN POINTS ===================== */
         .pain-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
             gap: 20px;
         }
 
@@ -569,7 +569,7 @@
         /* ===================== SERVICES ===================== */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
             gap: 24px;
         }
 
@@ -707,7 +707,7 @@
         /* ===================== PORTFOLIO ===================== */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
             gap: 24px;
         }
 
@@ -943,7 +943,7 @@
         /* ===================== TESTIMONIALS ===================== */
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
             gap: 24px;
         }
 
@@ -1255,17 +1255,13 @@
             .section-title { font-size: 1.8rem; }
 
             .cta-section h2 { font-size: 2rem; }
-        }
 
-        @media (max-width: 640px) {
-            .hero { padding: 100px 0 60px; min-height: auto; }
-            .hero-left h1 { font-size: 2rem; }
-            .nav-links { display: none !important; }
-            .mobile-toggle { display: block !important; }
+            .pain-grid {
+                grid-template-columns: 1fr;
+            }
 
-            .process-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .portfolio-grid {
@@ -1275,12 +1271,212 @@
             .testimonial-grid {
                 grid-template-columns: 1fr;
             }
+        }
 
-            .cta-section h2 { font-size: 1.7rem; }
+        @media (max-width: 640px) {
+            section {
+                padding: 56px 0;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero {
+                padding: 90px 0 50px;
+                min-height: auto;
+            }
+
+            .hero-left h1 {
+                font-size: 1.75rem;
+                line-height: 1.15;
+            }
+
+            .hero-left .subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
+
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 5px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .hero-btns .btn-primary,
+            .hero-btns .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 24px;
+                font-size: 0.95rem;
+            }
+
+            .hero-trust {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+                font-size: 0.78rem;
+            }
+
+            .nav-links { display: none !important; }
+            .mobile-toggle { display: block !important; }
+
+            .section-header {
+                margin-bottom: 36px;
+            }
+
+            .section-label {
+                font-size: 0.75rem;
+                letter-spacing: 1.5px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.92rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .service-card {
+                padding: 24px 20px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .process-step h3 {
+                font-size: 0.88rem;
+            }
+
+            .process-step p {
+                font-size: 0.75rem;
+            }
+
+            .process-num {
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-preview {
+                height: 160px;
+            }
+
+            .portfolio-info {
+                padding: 18px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+
+            .cred-left h2 {
+                font-size: 1.5rem;
+            }
+
+            .cred-left p {
+                font-size: 0.88rem;
+            }
+
+            .cred-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .cred-stat {
+                padding: 16px;
+            }
+
+            .cred-stat .number {
+                font-size: 1.3rem;
+            }
+
+            .cred-item {
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .cred-item-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+            }
+
+            .cred-item h4 {
+                font-size: 0.82rem;
+            }
+
+            .cred-item p {
+                font-size: 0.72rem;
+            }
+
+            .cta-section {
+                padding: 64px 0;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section p {
+                font-size: 0.92rem;
+                margin-bottom: 28px;
+            }
+
+            .cta-section .btn-primary {
+                font-size: 0.95rem;
+                padding: 14px 28px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .faq-question {
+                font-size: 0.88rem;
+                padding: 16px 0;
+            }
+
+            .faq-answer p {
+                font-size: 0.82rem;
+            }
 
             .footer-inner {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .floating-cta a {
+                padding: 12px 18px;
+                font-size: 0.82rem;
+            }
+
+            .nav-inner {
+                padding: 0 16px;
             }
         }
 
