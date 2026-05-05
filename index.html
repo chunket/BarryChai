@@ -793,6 +793,50 @@
             color: var(--accent-light);
         }
 
+        /* ===================== ABOUT PHOTO ===================== */
+        .about-photo-card {
+            background: var(--card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 212, 170, 0.12), 0 20px 60px rgba(0,0,0,0.4);
+            margin-bottom: 14px;
+        }
+
+        .about-photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .about-photo-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .about-photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 22px;
+            background: linear-gradient(to top, rgba(6,11,20,0.92) 0%, rgba(6,11,20,0.4) 60%, transparent 100%);
+        }
+
+        .about-photo-overlay .photo-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .about-photo-overlay .photo-title {
+            font-size: 0.78rem;
+            color: var(--accent-light);
+            margin-top: 3px;
+        }
+
         /* ===================== CREDIBILITY ===================== */
         .cred-grid {
             display: grid;
@@ -1913,6 +1957,13 @@
                     </div>
                 </div>
                 <div class="cred-right">
+                    <div class="about-photo-card">
+                        <img src="images/barry.png" alt="Barry Chai — Professional Technologist & Web Developer" loading="lazy">
+                        <div class="about-photo-overlay">
+                            <div class="photo-name">Barry Chai, Ts.</div>
+                            <div class="photo-title">Professional Technologist &middot; Former CTO</div>
+                        </div>
+                    </div>
                     <div class="cred-item">
                         <div class="cred-item-icon">🎓</div>
                         <div>
